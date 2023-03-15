@@ -1,0 +1,11 @@
+### Developed By: Kavinraja D
+### Register No: 212222240047
+
+import cv2
+videoCaptureObject = cv2.VideoCapture(0)
+while (True):
+    ret,frame = videoCaptureObject.read()
+    cv2.imwrite("212222240047(KAVINRAJA D).jpeg",frame)
+    result = False
+videoCaptureObject.release()
+cv2.destroyAllWindows()

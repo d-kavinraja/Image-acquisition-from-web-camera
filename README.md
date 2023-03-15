@@ -13,48 +13,130 @@ iv) Rotate and display the video
 Anaconda - Python 3.7
 ## Algorithm
 ### Step 1:
-<br>
+Import the package cv2 and save the file.
 
 ### Step 2:
-<br>
+Use while loop and return the video with the frame.
 
 ### Step 3:
-<br>
+Use the loop and entry the height and width of the Frame.
 
 ### Step 4:
-<br>
+Destroy all windows and return the video.
 
 ### Step 5:
-<br>
+End the program and close the output image windows.
 
 ## Program:
 ``` Python
-### Developed By:
-### Register No:
+### Developed By: Kavinraja D
+### Register No: 212222240047
 
 ## i) Write the frame as JPG file
-
-
+import cv2
+videoCaptureObject = cv2.VideoCapture(0)
+while (True):
+    ret,frame = videoCaptureObject.read()
+    cv2.imwrite("212222240047(KAVINRAJA D).jpeg",frame)
+    result = False
+videoCaptureObject.release()
+cv2.destroyAllWindows()
 
 
 ## ii) Display the video
+import cv2
+videoCaptureObject = cv2.VideoCapture(0)
+while(True):
+    ret,frame = videoCaptureObject.read()
+    cv2.imshow('myimage',frame)
+    if cv2.waitKey(1) == ord('q'):
+        break
+videoCaptureObject.release()
+cv2.destroyAllWindows()
 
 
 
 
 ## iii) Display the video by resizing the window
+import cv2
 
+import numpy as np
+
+cap = cv2.VideoCapture(0)
+
+while True:
+
+    ret, frame = cap.read() 
+    
+    width = int(cap.get(3))
+    
+    height = int(cap.get(4))
+    
+    
+
+    image = np.zeros(frame.shape, np.uint8) 
+
+    smaller_frame = cv2.resize(frame, (0,0), fx = 0.5, fy=0.5) 
+    
+    image[:height//2, :width//2] = smaller_frame
+
+    image[height//2:, :width//2] = smaller_frame
+
+    image[:height//2, width//2:] = smaller_frame 
+    
+    image [height//2:, width//2:] = smaller_frame
+    
+    cv2.imshow('myimage', image)
+
+    if cv2.waitKey(1) == ord('q'):
+
+        break
+
+cap.release()
+
+cv2.destroyAllWindows()
 
 
 
 
 ## iv) Rotate and display the video
+import cv2
 
+import numpy as np
 
+cap = cv2.VideoCapture(0)
 
+while True:
 
+    ret, frame = cap.read() 
+    
+    width = int(cap.get(3))
+    
+    height = int(cap.get(4))
+    
+    
 
+    image = np.zeros(frame.shape, np.uint8) 
 
+    smaller_frame = cv2.resize(frame, (0,0), fx = 0.5, fy=0.5) 
+    
+    image[:height//2, :width//2] = cv2.rotate(smaller_frame,cv2.ROTATE_180)
+
+    image[height//2:, :width//2] = cv2.rotate(smaller_frame,cv2.ROTATE_180)
+
+    image[:height//2, width//2:] = smaller_frame 
+    
+    image [height//2:, width//2:] = smaller_frame
+    
+    cv2.imshow('myimage', image)
+
+    if cv2.waitKey(1) == ord('q'):
+
+        break
+
+cap.release()
+
+cv2.destroyAllWindows()
 
 
 
@@ -62,24 +144,21 @@ Anaconda - Python 3.7
 ## Output
 
 ### i) Write the frame as JPG image
-</br>
-</br>
 
+![OUTOUT](./images/write%20the%20video.png)
 
 ### ii) Display the video
-</br>
-</br>
+![output](./images/display.png)
+
 
 
 ### iii) Display the video by resizing the window
-</br>
-</br>
-
+![OUTPUT](./images/multi.png)
 
 
 ### iv) Rotate and display the video
-</br>
-</br>
+![OUTPUT](./images/rotate.png)
+
 
 
 
