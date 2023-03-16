@@ -16,19 +16,16 @@ Anaconda - Python 3.7
 Import the package cv2 and save the file.
 
 ### Step 2:
-Use while loop and return the video with the frame.
-
+Capture the Video from the WebCamera.
 ### Step 3:
-Use the loop and entry the height and width of the Frame.
-
+Write the image to a file.
 ### Step 4:
-Destroy all windows and return the video.
-
+Show the image or the live camera.
 ### Step 5:
 End the program and close the output image windows.
 
 ## Program:
-``` Python
+``` Python 3
 ### Developed By: Kavinraja D
 ### Register No: 212222240047
 
@@ -116,8 +113,6 @@ cv2.destroyAllWindows()
 
 ### iv) Rotate and display the video
 ![OUTPUT](./images/rotate.png)
-
-
 
 
 ## Result:
